@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#fff5f5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>1 Month with Anora Ku</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="sampai-akhir-waktu.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Music Control Button -->
+    <button class="music-control" id="musicControl" onclick="toggleMusic(event)">
+        <svg class="music-icon playing" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18V5l12-2v13"/>
+            <circle cx="6" cy="18" r="3"/>
+            <circle cx="18" cy="16" r="3"/>
+        </svg>
+        <svg class="music-icon paused" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M9 18V5l12-2v13"/>
+            <circle cx="6" cy="18" r="3"/>
+            <circle cx="18" cy="16" r="3"/>
+            <line x1="4" y1="4" x2="20" y2="20"/>
+        </svg>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-background">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="avatar-pair">
+                <div class="avatar avatar-left">
+                    <div class="avatar-circle">
+                        <img src="toga.jpg" alt="Toga" class="avatar-img">
+                    </div>
+                    <span class="avatar-label">Raja meme x iblis</span>
+                </div>
+                <div class="heart-connector">
+                    <svg viewBox="0 0 40 40" class="heart-svg">
+                        <path d="M20,35 C20,35 5,25 5,15 C5,10 8,7 12,7 C15,7 17,9 20,12 C23,9 25,7 28,7 C32,7 35,10 35,15 C35,25 20,35 20,35 Z" fill="#ff6b9d"/>
+                    </svg>
+                </div>
+                <div class="avatar avatar-right">
+                    <div class="avatar-circle">
+                        <img src="nora.jpg" alt="Nora" class="avatar-img">
+                    </div>
+                    <span class="avatar-label">Ratu iblis x meme</span>
+                </div>
+            </div>
+            <h1 class="hero-title">Hai Anora, <br>Anoraku tersayang!</h1>
+            <p class="hero-subtitle">1 month down, forever to go</p>
+            <button class="cta-button" onclick="scrollToNext()">
+                <span>Mulai</span>
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="timeline">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">Our Story</h2>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline-item" data-index="0">
+                <div class="timeline-marker">
+                    <div class="marker-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="content-card">
+                        <span class="card-tag">17 10 keramat</span>
+                        <h3>First Time</h3>
+                        <p>Waktu pertama kali resmi, beh rasanya, masih kerasa sampe sekarang. Masih, sayang. (TERIMAKASIH AMOI)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-index="1">
+                <div class="timeline-marker">
+                    <div class="marker-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="content-card">
+                        <span class="card-tag">Every day</span>
+                        <h3>Endless Conversations</h3>
+                        <p>Chat dari pagi sampe malem, yap all day. Dari hal random sampe yang deep talk owek owek WKWK.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-index="2">
+                <div class="timeline-marker">
+                    <div class="marker-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="content-card">
+                        <span class="card-tag">Best moments</span>
+                        <h3>Laughing Together</h3>
+                        <p>Ketawa bareng sampe perut sakit, tbtb mau berak ajg. those little moments yang bikin semuanya jadi haduhhh.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-index="3">
+                <div class="timeline-marker">
+                    <div class="marker-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="content-card">
+                        <span class="card-tag">Memorable</span>
+                        <h3>Late Night Vibes</h3>
+                        <p>Call sampai tengah malem sambil ngobrol random, "LAH UDAH MAU SUBUH SAYANG".</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-index="4">
+                <div class="timeline-marker">
+                    <div class="marker-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="content-card">
+                        <span class="card-tag">Every week</span>
+                        <h3>Game Dates</h3>
+                        <p>Planning mabar kita, walaupun ada si yapper dan cowo halunya itu WKWKWKWK (ayo main lagi woi, udah kangen)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-index="5">
+                <div class="timeline-marker">
+                    <div class="marker-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="content-card">
+                        <span class="card-tag">Special</span>
+                        <h3>Little Surprises</h3>
+                        <p>Dari vn random, foto tiba-tiba, sampai chat panjang di waktu unexpected. All those little things.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item" data-index="6">
+                <div class="timeline-marker">
+                    <div class="marker-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="timeline-content">
+                    <div class="content-card">
+                        <span class="card-tag">17 November 2025</span>
+                        <h3>1 Month & Counting</h3>
+                        <p>Nah di sini kita sekarang. Satu bulan w memories yang gacor. (dan ini baru permulaan bjir)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Grid Section -->
+    <section class="grid-section" id="reasons">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">What I Love About You</h2>
+        </div>
+        <div class="reasons-grid">
+            <div class="reason-card" data-reveal="false">
+                <div class="card-front">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <span class="card-hint">Tap to reveal</span>
+                </div>
+                <div class="card-back">
+                    <p>Senyummu tuh bikin mood aku langsung naik, sehari langsung berasa bisa meratakan dunia.</p>
+                </div>
+            </div>
+            <div class="reason-card" data-reveal="false">
+                <div class="card-front">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                            <path d="M7 12h10"/>
+                            <path d="M12 7v10"/>
+                        </svg>
+                    </div>
+                    <span class="card-hint">Tap to reveal</span>
+                </div>
+                <div class="card-back">
+                    <p>Kamu selalu dengerin cerita aku, dari yang penting sampe yang kaya berak</p>
+                </div>
+            </div>
+            <div class="reason-card" data-reveal="false">
+                <div class="card-front">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <span class="card-hint">Tap to reveal</span>
+                </div>
+                <div class="card-back">
+                    <p>kamu bikin aku pengen jadi orang yang lebih baik setiap harinya, biar kalau ngelamar langsung di acc pak bos hehe</p>
+                </div>
+            </div>
+            <div class="reason-card" data-reveal="false">
+                <div class="card-front">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <span class="card-hint">Tap to reveal</span>
+                </div>
+                <div class="card-back">
+                    <p>Lucumu itu lucuku banget. apalagi pas lagi kesel, clingy, ah semua dah, cute abis sialan (kaya babi)</p>
+                </div>
+            </div>
+            <div class="reason-card" data-reveal="false">
+                <div class="card-front">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <span class="card-hint">Tap to reveal</span>
+                </div>
+                <div class="card-back">
+                    <p>Kamu ngajarin aku banyak hal, especially gimana caranya truly care about someone (maaf kalau kadang kaya...)</p>
+                </div>
+            </div>
+            <div class="reason-card" data-reveal="false">
+                <div class="card-front">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <span class="card-hint">Tap to reveal</span>
+                </div>
+                <div class="card-back">
+                    <p>Ya pokoknya kamu tuh spesial, lebih dari nasgor 7 telur</p>
+                </div>
+            </div>
+            <div class="reason-card" data-reveal="false">
+                <div class="card-front">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <span class="card-hint">Tap to reveal</span>
+                </div>
+                <div class="card-back">
+                    <p>Cara kamu ngomongin hal-hal yang kamu suka tuh bikin aku ikutan excited, bawaannya pengen denger terus walau udah merem ngantuk</p>
+                </div>
+            </div>
+            <div class="reason-card" data-reveal="false">
+                <div class="card-front">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <span class="card-hint">Tap to reveal</span>
+                </div>
+                <div class="card-back">
+                    <p>Kamu supportive banget, selalu ada waktu aku butuh support atau lagi down</p>
+                </div>
+            </div>
+            <div class="reason-card" data-reveal="false">
+                <div class="card-front">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <span class="card-hint">Tap to reveal</span>
+                </div>
+                <div class="card-back">
+                    <p>Kamu bikin aku nyaman buat jadi diri sendiri, tanpa harus pura-pura jadi orang lain (TERIMAKASIH SEKALIIIII)</p>
+                </div>
+            </div>
+            <div class="reason-card" data-reveal="false">
+                <div class="card-front">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <span class="card-hint">Tap to reveal</span>
+                </div>
+                <div class="card-back">
+                    <p>Energy kamu tuh contagious, mood aku langsung up kalau udah chat atau call sama kamu (moodbooster sejati)</p>
+                </div>
+            </div>
+            <div class="reason-card" data-reveal="false">
+                <div class="card-front">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+                            <path d="M12 6v6l4 4"/>
+                        </svg>
+                    </div>
+                    <span class="card-hint">Tap to reveal</span>
+                </div>
+                <div class="card-back">
+                    <p>Kamu sabar banget ngadepin aku yang kadang over thinking, ada aja ulahnya. thank you for always understanding me</p>
+                </div>
+            </div>
+            <div class="reason-card" data-reveal="false">
+                <div class="card-front">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <span class="card-hint">Tap to reveal</span>
+                </div>
+                <div class="card-back">
+                    <p>The way kamu appreciate hal-hal kecil yang aku lakuin (demi Allah, bikin aku merasa valued banget)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Memories Section -->
+    <section class="memories-section" id="memories">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">Moment Archive</h2>
+            <p class="section-subtitle">Pieces of us, saved in time</p>
+        </div>
+        <div class="memories-grid">
+            <div class="memory-card" data-index="0">
+                <div class="memory-icon chat">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        <line x1="9" y1="10" x2="15" y2="10"/>
+                        <line x1="9" y1="14" x2="13" y2="14"/>
+                    </svg>
+                </div>
+                <h4>777,000+ Chats</h4>
+                <p>Dari good morning sampe gomawo for tonight, chat kita selalu bjir bjir</p>
+            </div>
+            <div class="memory-card" data-index="1">
+                <div class="memory-icon voice">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                        <line x1="12" y1="19" x2="12" y2="23"/>
+                        <line x1="8" y1="23" x2="16" y2="23"/>
+                    </svg>
+                </div>
+                <h4>Voice Notes</h4>
+                <p>Suara kamu yang bikin hari aku lebih lebih lebih membantai</p>
+            </div>
+            <div class="memory-card" data-index="2">
+                <div class="memory-icon video">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </div>
+                <h4>Voice Calls</h4>
+                <p>Late night calls yang jadi highlight hari-hari kita</p>
+            </div>
+            <div class="memory-card" data-index="3">
+                <div class="memory-icon story">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                        <line x1="7" y1="2" x2="7" y2="22"/>
+                        <line x1="17" y1="2" x2="17" y2="22"/>
+                        <line x1="2" y1="12" x2="22" y2="12"/>
+                        <line x1="2" y1="7" x2="7" y2="7"/>
+                        <line x1="2" y1="17" x2="7" y2="17"/>
+                        <line x1="17" y1="17" x2="22" y2="17"/>
+                        <line x1="17" y1="7" x2="22" y2="7"/>
+                    </svg>
+                </div>
+                <h4>Stories</h4>
+                <p>Kamu selalu yang pertama tau ceritaku, always</p>
+            </div>
+            <div class="memory-card" data-index="4">
+                <div class="memory-icon meme">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                        <line x1="9" y1="9" x2="9.01" y2="9"/>
+                        <line x1="15" y1="9" x2="15.01" y2="9"/>
+                    </svg>
+                </div>
+                <h4>Memes & Jokes</h4>
+                <p>Random memes yang cuma kita berdua yang paham (TERUSLAH MENJADI RATU MEMEKU SAYANG)</p>
+            </div>
+            <div class="memory-card" data-index="5">
+                <div class="memory-icon playlist">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <path d="M21 15l-5-5L5 21"/>
+                    </svg>
+                </div>
+                <h4>Random Photos</h4>
+                <p>Foto-foto random yang kita kirim, dari selfie sampe foto makanan WKWKWK</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playlist Section -->
+    <section class="playlist-section" id="playlist">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title">Shared Playlist</h2>
+            <p class="section-subtitle">Songs that feel like us</p>
+        </div>
+        <div class="playlist-container">
+            <div class="song-item" data-index="0">
+                <div class="song-info">
+                    <h4>Beautiful Boy (Remastered 2010)</h4>
+                    <p>John Lennon</p>
+                </div>
+                <a href="https://open.spotify.com/track/5URfZHMlUWTWxPvvSBWcPk" target="_blank" class="play-btn" title="Play on Spotify">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="song-item" data-index="1">
+                <div class="song-info">
+                    <h4>Good Looking</h4>
+                    <p>Suki Waterhouse</p>
+                </div>
+                <a href="https://open.spotify.com/track/0j3mqDTK4Z6lvrLzFCUUz6" target="_blank" class="play-btn" title="Play on Spotify">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="song-item" data-index="2">
+                <div class="song-info">
+                    <h4>Dream Girl</h4>
+                    <p>Crisaunt</p>
+                </div>
+                <a href="https://open.spotify.com/track/3Z6cltU0OfbUdSZtZlzKPL" target="_blank" class="play-btn" title="Play on Spotify">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="song-item" data-index="3">
+                <div class="song-info">
+                    <h4>Thinking About You</h4>
+                    <p>Frank Ocean</p>
+                </div>
+                <a href="https://open.spotify.com/track/7DfFc7a6Rwfi3YQMRbDMau" target="_blank" class="play-btn" title="Play on Spotify">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="song-item" data-index="4">
+                <div class="song-info">
+                    <h4>Superpowers</h4>
+                    <p>Daniel Caesar</p>
+                </div>
+                <a href="https://open.spotify.com/track/736PP5LTtREkDgktNmX3Gu" target="_blank" class="play-btn" title="Play on Spotify">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="song-item" data-index="5">
+                <div class="song-info">
+                    <h4>I Wanna Be Yours</h4>
+                    <p>Arctic Monkeys</p>
+                </div>
+                <a href="https://open.spotify.com/track/5XeFesFbtLpXzIVDNQP22n" target="_blank" class="play-btn" title="Play on Spotify">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="song-item" data-index="6">
+                <div class="song-info">
+                    <h4>SUDAH TERBIASA TERJADI TANTE (S2 ITB BARENG)</h4>
+                    <p>toga anora yang punya</p>
+                </div>
+                <a href="https://open.spotify.com/track/4OkQIkCRZk6q3q6ouTcoop" target="_blank" class="play-btn" title="Play on Spotify">
+                    <svg viewBox="0 0 24 24" fill="white">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishlist Section -->
+    <section class="wishlist-section" id="wishlist">
+        <div class="section-header">
+            <span class="section-number">05</span>
+            <h2 class="section-title">Things We'll Do Together</h2>
+            <p class="section-subtitle">Simple plans we’d love to make real, together</p>
+        </div>
+        <div class="wishlist-grid">
+            <div class="wish-card" data-completed="false">
+                <div class="wish-image">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop" alt="Sunset">
+                </div>
+                <div class="wish-content">
+                    <h4>Nonton sunset bareng</h4>
+                    <p>Di tempat yang bagus sambil ngobrol (beneran ngobrol)</p>
+                </div>
+            </div>
+            <div class="wish-card" data-completed="false">
+                <div class="wish-image">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600&h=400&fit=crop" alt="Cooking">
+                </div>
+                <div class="wish-content">
+                    <h4>Masak bareng</h4>
+                    <p>Walaupun hasilnya gak sempurna, yang penting sama kamu sialannnnn</p>
+                </div>
+            </div>
+            <div class="wish-card" data-completed="false">
+                <div class="wish-image">
+                    <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&h=400&fit=crop" alt="Road Trip">
+                </div>
+                <div class="wish-content">
+                    <h4>Road Trip Adventure</h4>
+                    <p>Ke tempat random yang kita belum pernah visit</p>
+                </div>
+            </div>
+            <div class="wish-card" data-completed="false">
+                <div class="wish-image">
+                    <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600&h=400&fit=crop" alt="Scrapbook">
+                </div>
+                <div class="wish-content">
+                    <h4>Bikin scrapbook</h4>
+                    <p>Physical version dari memories kita</p>
+                </div>
+            </div>
+            <div class="wish-card" data-completed="false">
+                <div class="wish-image">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=400&fit=crop" alt="Stargazing">
+                </div>
+                <div class="wish-content">
+                    <h4>Stargazing</h4>
+                    <p>Liat bintang sambil ngobrol deep talk</p>
+                </div>
+            </div>
+            <div class="wish-card wish-special" data-completed="false">
+                <div class="wish-image">
+                    <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600&h=400&fit=crop" alt="Makkah">
+                </div>
+                <div class="wish-content">
+                    <h4>Jalan ke Mekkah ✨</h4>
+                    <p>Berdoa bareng di tanah suci, insyaAllah someday</p>
+                </div>
+            </div>
+            <div class="wish-card wish-special" data-completed="false">
+                <div class="wish-image">
+                    <img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?w=600&h=400&fit=crop" alt="Italy">
+                </div>
+                <div class="wish-content">
+                    <h4>Jalan-jalan ke Italia 🇮🇹</h4>
+                    <p>Explore Roma, Venice, dan makan pizza kesukaanmu itu, bareng</p>
+                </div>
+            </div>
+            <div class="wish-card" data-completed="false">
+                <div class="wish-image">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=400&fit=crop" alt="Anniversaries">
+                </div>
+                <div class="wish-content">
+                    <h4>Celebrate more anniversaries</h4>
+                    <p>2 months, 3 months, 6 months... and beyond!</p>
+                </div>
+            </div>
+            <div class="wish-card wish-special" data-completed="false">
+                <div class="wish-image">
+                    <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=600&h=400&fit=crop" alt="Stadium">
+                </div>
+                <div class="wish-content">
+                    <h4>Chelsea vs Barcelona di Stadion ⚽</h4>
+                    <p>Nonton live pertandingan king chelsea dan king barca, lesgo!</p>
+                </div>
+            </div>
+            <div class="wish-card wish-endless" data-completed="false">
+                <div class="wish-image">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=400&fit=crop" alt="Endless">
+                </div>
+                <div class="wish-content">
+                    <h4>Dan semua hal yang gabisa di-list disini...</h4>
+                    <p>Karena adventure kita baru dimulai, there's so much more to come ♡</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Letter Section -->
+    <section class="letter-section" id="letter">
+        <div class="section-header">
+            <span class="section-number">06</span>
+            <h2 class="section-title">A Letter For You</h2>
+        </div>
+        <div class="letter-container">
+            <div class="letter-paper">
+                <div class="paper-lines"></div>
+                <div class="letter-content">
+                    <p class="letter-salutation">To my dearest Anora, Anora Nasya MaretaKu</p>
+                    <p>One month might seem short to some people, but for me, it's been the most beautiful 30 days I've ever experienced. Every single day sama kamu feels like opening a new chapter yang penuh kegilaan yang membuatku wow.</p>
+                    <p>You came into my life and suddenly everything feels different,in the best way possible. The way you laugh, the way you care, the way you make me feel seen and heard... it's something i never knew i needed until i found you.</p>
+                    <p>I love how u remember the tiniest details dari cerita random aku. How u always check on me when Im quiet. How your voice notes brighten my entire day. These small gestures mean the absolute world to me, Anora.</p>
+                    <p>Our late-night conversations, the endless chats, sharing songs, sending each other memes (WKWKWK SIALAN).semua momen kecil ini adalah treasure terbesar buat aku. You've taught me that distance doesnt matter when two hearts are connected.</p>
+                    <p>Thank you for being patient dengan segala kekurangan aku. Thank you for choosing to stay. Thank you for being exactly who you are (perfectly imperfect, beautifully genuine, and incredibly special.)</p>
+                    <p>I promise to always be ur safe space, ur biggest supporter, and ur partner through everything. I'll make you smile, hold your hand through tough times, and celebrate every little victory with u.</p>
+                    <p>This is just the beginning, sayang. We have so many more memories to create, dreams to chase together, and love to share. Here's to many more months, years, and forever moments with you.</p>
+                    <div class="letter-signature">
+                        <p>Forever yours,</p>
+                        <p class="signature-name">Toga Micolasdo Sitanggang ♡</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Wall Section -->
+    <section class="message-section" id="message">
+        <div class="section-header">
+            <span class="section-number">07</span>
+            <h2 class="section-title">Your Voice, In Words</h2>
+            <p class="section-subtitle">I’m here to listen ♡</p>
+        </div>
+        <div class="message-container">
+            <div class="message-form-wrapper">
+                <form action="https://formsubmit.co/togasitanggang17@gmail.com" method="POST" class="message-form" id="messageForm">
+                    <!-- Honeypot for spam protection -->
+                    <input type="text" name="_honey" style="display:none">
+                    
+                    <!-- Disable captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <!-- Subject -->
+                    <input type="hidden" name="_subject" value="New Message from Anora! 💕">
+                    
+                    <!-- Template for email -->
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Hanya kamu, Anoraku...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tulis sesuatu buat aku..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                        <span>Send with Love</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Section -->
+    <section class="final-section" id="final">
+        <div class="final-content">
+            <div class="anniversary-badge">
+                <svg class="badge-circle" viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="90" fill="none" stroke="#ff6b9d" stroke-width="2" stroke-dasharray="5,5"/>
+                </svg>
+                <div class="badge-content">
+                    <span class="badge-number">1</span>
+                    <span class="badge-label">Month</span>
+                    <span class="badge-date">Oct - Nov 2025</span>
+                </div>
+            </div>
+            <h2 class="final-title">Here's to many more months together</h2>
+            <div class="realtime-counter">
+                <p class="counter-label">We've been together for:</p>
+                <div class="counter-display" id="relationshipCounter">
+                    <div class="counter-item">
+                        <span class="counter-value" id="months">0</span>
+                        <span class="counter-unit">months</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-value" id="days">0</span>
+                        <span class="counter-unit">days</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-value" id="hours">0</span>
+                        <span class="counter-unit">hours</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-value" id="minutes">0</span>
+                        <span class="counter-unit">minutes</span>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter-value" id="seconds">0</span>
+                        <span class="counter-unit">seconds</span>
+                    </div>
+                </div>
+            </div>
+            <button class="final-button" onclick="scrollToMessage()">
+                <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+                <span>Leave a Message</span>
+            </button>
+            <button class="reset-button" onclick="resetToTop()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                    <path d="M21 3v5h-5"/>
+                </svg>
+                <span>Im addicted, mau ulang ah</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <div class="modal-hearts">
+                <svg class="heart-large" viewBox="0 0 24 24" fill="#ff6b9d">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+            </div>
+            <h2>Love you too!</h2>
+            <p>Thanks for the best month, sayang 💕</p>
+            <button class="modal-close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div class="modal-overlay" id="thankYouModal">
+        <div class="modal-content">
+            <div class="modal-hearts">
+                <svg class="heart-large" viewBox="0 0 24 24" fill="#ff6b9d">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+            </div>
+            <h2>Message Sent! ♡</h2>
+            <p>Thank you sayang, your message has been delivered to my heart 💕</p>
+            <button class="modal-close" onclick="closeThankYouModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
